@@ -5,34 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="style.css">
     <title> For retailers </title>
+    <link rel="icon" type="image/png" href="onshelves-logo.ico">
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
 
-<nav class="navbar">
-<div class="logo">OnShelves</div>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="how-it-works.html">How it Works</a></li>
-<li><a href="brands.html">For Brands</a></li>
-<li><a href="retailers.html">For Retailers</a></li>
-<li><a href="contact-us.html">Contact</a></li>
-</ul>
-</nav>
+  <nav class="navbar">
+        <div class="logo">
+       <img src="logo-bgless.png" alt="OnShelves Logo"> OnShelves
+   </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How it Works</a></li>
+            <li><a href="brands.html">For Brands</a></li>
+            <li><a href="retailers.html">For Retailers</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+    </nav>
 
 <body>
-<section class="hero">
-    <h2> For modern store chains:</h2>
-    You recieve multiple brand pitches daily claiming to be the next big thing. 
-    <br>
-    OnShelves helps you identify which brands will actually win.
-    <br>
-    Cut through the noise and identify what products work in your stores. 
-    <hr>
-    <h2> For general trade stores (coming soon):</h2>
-    Transform your valuable shelves into another source of income.
-    <br>
-    Stock new brands. Risk free
-    <hr>
-    <h3> Make retail seamless, partner with OnShelves today</h3>
+<!-- HERO SECTION -->
+    <section class="retailers-hero">
+        <div class="hero-content">
+            <h1>Transform Your Retail Space</h1>
+            <p>Partner with premium D2C brands and maximize your shelf revenue</p>
+        </div>
+    </section>
+
+    <!-- TABS SECTION -->
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <button class="tab-button active" data-tab="modern">Modern Store Chains</button>
+            <button class="tab-button" data-tab="general">General Trade Stores</button>
+        </div>
+    </section>
+    <!-- MODERN STORES CONTENT -->
+    <section class="tab-content active" id="modern">
+        <div class="feature-card">
+            <div class="card-content">
+                <span class="card-label">For modern store chains</span>
+                <h2>Cut through the noise and stock winners</h2>
+                <p class="card-description">You receive multiple brand pitches daily claiming to be the next big thing. OnShelves helps you identify which brands will actually win.</p>
+                
+                <ul class="benefits-list">
+                    <li>
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">
+                            <h4>Pre-vetted Quality Brands</h4>
+                            <p>We filter through hundreds of D2C brands to bring you only the proven performers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">
+                            <h4>Zero Inventory Risk</h4>
+                            <p>Work with brands that understand retail dynamics and offer flexible terms</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="contact-us.html" class="card-button">
+                    <span>Learn more</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                 </div>
+            
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&h=700&fit=crop" alt="Modern Store" />
+            </div>
+        </div>
+    </section>
+
+    <!-- GENERAL STORES CONTENT -->
+   <!-- GENERAL STORES CONTENT -->
+<section class="tab-content" id="general">
+    <div class="feature-card">
+        <div class="card-content">
+            <span class="card-label">Coming Q2 2026</span>
+            <h2>Upgrade your Kirana Store</h2>
+            <p class="card-description">We're working hard to bring OnShelves to general trade. Get ready to transform your shop into a modern retail hub.</p>
+            
+            <ul class="benefits-list">
+                <li>
+                    <div class="benefit-icon">📦</div>
+                    <div class="benefit-text">
+                        <h4>Stock Risk-Free</h4>
+                        <p>Try new products without blocking your capital</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">⭐</div>
+                    <div class="benefit-text">
+                        <h4>Premium Access</h4>
+                        <p>Get direct access to high-margin D2C brands</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-text">
+                        <h4>Simple Management</h4>
+                        <p>Easy inventory tracking designed for busy counters</p>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="contact-us.html" class="card-button">
+                <span>Notify Me When Available</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="card-image">
+            <img src="store.png" alt="General Trade Store" />
+        </div>
+    </div>
 </section>
+    </section>
+     <!-- STATS SECTION -->
+    <section class="retailers-stats">
+        <h2>The OnShelves Advantage</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <h3>30%</h3>
+                <p>Average increase in foot traffic</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <h3>₹50K+</h3>
+                <p>Additional monthly revenue per store</p>
+            </div>
+            <div class="stat-card">
+                 <div class="stat-icon">⭐</div>
+                <h3>4.8/5</h3>
+                <p>Retailer satisfaction rating</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🤝</div>
+                <h3>100+</h3>
+                <p>Partner stores nationwide</p>
+            </div>
+        </div>
+    </section>
+    <!-- CTA SECTION -->
+    <section class="retailers-cta">
+        <div class="cta-content">
+            <h2>Make retail seamless, partner with OnShelves today</h2>
+            <p>Join our growing network of successful retail partners</p>
+            <a href="contact-us.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!--JAVASCRIPT CODE TO MAKE BUTTON RESPONSIVE-->
+<script>
+    // 1. Select all tab buttons and content sections
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // 2. Add a click event listener to each button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            
+            // 3. Remove 'active' class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // 4. Add 'active' class to the clicked button
+            button.classList.add('active');
+
+            // 5. Get the value of the data-tab attribute (e.g., "general" or "modern")
+            const tabId = button.getAttribute('data-tab');
+
+            // 6. Find the content section with that ID and make it active
+            const targetContent = document.getElementById(tabId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+</script>
 </body>
 
