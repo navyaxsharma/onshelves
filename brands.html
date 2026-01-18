@@ -3,38 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
     <title>For Brands</title>
-      <link rel="icon" type="image/png" href="onshelves-logo.ico">
-<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="onshelves-logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Mobile Navbar overrides */
+        @media (max-width: 768px) {
+            .navbar {
+                position: relative;
+                z-index: 2000; /* Keeps navbar on top of hero image */
+                background: white;
+            }
+            .hamburger {
+                display: flex !important;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                z-index: 2001;
+            }
+            .hamburger span {
+                width: 25px;
+                height: 3px;
+                background-color: #333;
+                border-radius: 2px;
+            }
+            .nav-links {
+                display: none; /* Hidden by default */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                z-index: 1999;
+                border-top: 1px solid #eee;
+            }
+            /* This class is toggled by JS to show the menu */
+            .nav-links.active {
+                display: flex !important;
+            }
+            .nav-links li {
+                margin: 15px 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
-<header class="navbar">
-    <div class="logo">
-        <img src="logo-bgless.png" alt="OnShelves Logo">
-        <span>OnShelves</span>
-    </div>
-    
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html">How it Works</a></li>
-        <li><a href="brands.html">For Brands</a></li>
-        <li><a href="retailers.html">For Retailers</a></li>
-        <li><a href="contact-us.html" class="btn-contact">Contact</a></li>
-    </ul>
-</header>
-
 <body>
-<!-- HERO SECTION -->
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo-bgless.png" alt="OnShelves Logo">
+            <span>OnShelves</span>
+        </div>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How it Works</a></li>
+            <li><a href="brands.html">For Brands</a></li>
+            <li><a href="retailers.html">For Retailers</a></li>
+            <li><a href="contact-us.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </header>
+
     <section class="brands-hero">
         <div class="hero-content">
             <h1>You spend so much time perfecting the product, but what if one mistake ruins your entire brand?</h1>
@@ -42,7 +90,6 @@
         </div>
     </section>
 
-    <!-- VALUE PROPOSITION -->
     <section class="value-section">
         <div class="value-container">
             <div class="value-card fade-in">
@@ -64,7 +111,6 @@
         </div>
     </section>
 
-    <!-- CHALLENGES SECTION -->
     <section class="challenges-section">
         <h2>The Challenges You Face</h2>
         <div class="challenges-grid">
@@ -90,10 +136,9 @@
                 <h3>Market Insights Gap</h3>
                 <p>Without retail presence, you miss critical feedback on customer preferences and regional demand patterns.</p>
             </div>
-        </challenges-grid>
+        </div>
     </section>
 
-    <!-- SOLUTION SECTION -->
     <section class="solution-section">
         <div class="solution-container">
             <div class="solution-left">
@@ -110,7 +155,6 @@
                     </div>
                 </div>
 
-                
                  <div class="solution-item">
                     <div class="solution-icon">📊</div>
                     <div class="solution-content">
@@ -130,21 +174,31 @@
         </div>
     </section>
 
-
-    <!-- CTA SECTION -->
     <section class="brands-cta">
         <h2>Book a call today and re-imagine retail for your brand</h2>
         <p>Join the growing community of D2C brands scaling through offline retail</p>
         <a href="contact-us.html" class="cta-button">Book a Call Today</a>
     </section>
+
     <script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-links');
-        nav.classList.toggle('active');
-    }
-</script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("OnShelves Script Loaded"); // Debugging check
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevents any weird default behavior
+                    console.log("Hamburger clicked"); // Debugging check
+                    
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            } else {
+                console.error("Critical Error: Navbar elements not found.");
+            }
+        });
+    </script>
 </body>
-
-
 </html>

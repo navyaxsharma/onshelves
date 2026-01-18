@@ -1486,3 +1486,98 @@ img {
     padding: 20px;
     width: 100%;
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    
+    /* Fix the main container width */
+    .hero-section, .container, main {
+        width: 100% !important;
+        padding: 0 20px; /* Add breathing room on sides */
+        box-sizing: border-box;
+    }
+
+    /* Fix the Headline Text Size */
+    h1 {
+        font-size: 2.5rem !important; /* Scale down from desktop size */
+        line-height: 1.2;
+        text-align: center; /* Centers it nicely on mobile */
+    }
+
+    /* Fix the 'Squashed' Subtext */
+    p, .hero-subtext {
+        font-size: 1.1rem !important;
+        width: 100% !important; /* Forces text to use full screen width */
+        max-width: none !important;
+        text-align: center; /* Optional: looks cleaner on mobile */
+        white-space: normal; /* Prevents weird wrapping */
+    }
+}
+
+/* Mobile Navbar Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #fff; /* Or your dark theme bg color */
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* The class added by JS to show the menu */
+    .nav-links.active {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .glow-effect-class { /* Replace with your actual class name, e.g., .btn-primary */
+        box-shadow: 0 0 10px rgba(118, 75, 162, 0.5); /* Reduced spread and opacity */
+    }
+    
+    /* If it's a text glow */
+    h1.led-text {
+        text-shadow: 0 0 5px rgba(118, 75, 162, 0.6); /* Softer glow */
+    }
+}
+
+/* --- FIX MOBILE MENU CLASH --- */
+@media (max-width: 768px) {
+    .nav-links {
+        background-color: white !important; /* Makes it solid white */
+        position: absolute;
+        top: 70px; /* Pushes it right below the navbar */
+        left: 0;
+        width: 100%;
+        z-index: 9999; /* Forces it to sit ON TOP of everything else */
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Adds a shadow so it pops out */
+    }
+    
+    /* Ensure the links have space */
+    .nav-links li {
+        background-color: white; 
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- RESTORE SCROLLING TEXT ON MOBILE --- */
+@media (max-width: 768px) {
+    .vp {
+        white-space: nowrap !important; /* Forces text into one long line */
+        overflow: hidden !important;    /* Hides the overflow */
+        width: 100% !important;
+        padding-top: 20px;             /* Adds a little space from the header */
+    }
+
+    .vp span {
+        display: inline-block !important;
+        animation: scroll-horizontal 15s linear infinite !important; /* Ensures animation runs */
+        font-size: 20px !important;    /* Slightly smaller than desktop (30px) so it looks proportional */
+    }
+}
