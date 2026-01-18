@@ -15,18 +15,26 @@
 <body>
     
     <!-- NAVIGATION COMES FIRST -->
-    <nav class="navbar">
-        <div class="logo">
-       <img src="logo-bgless.png" alt="OnShelves Logo"> OnShelves
-   </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="how-it-works.html">How it Works</a></li>
-            <li><a href="brands.html">For Brands</a></li>
-            <li><a href="retailers.html">For Retailers</a></li>
-            <li><a href="contact-us.html">Contact</a></li>
-        </ul>
-    </nav>
+  <header class="navbar">
+    <div class="logo">
+        <img src="logo-bgless.png" alt="OnShelves Logo">
+        <span>OnShelves</span>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How it Works</a></li>
+        <li><a href="brands.html">For Brands</a></li>
+        <li><a href="retailers.html">For Retailers</a></li>
+        <li><a href="contact-us.html" class="btn-contact">Contact</a></li>
+    </ul>
+</header>
 
     <!-- HERO SECTION (Big colorful header) 
     <section class="OS">

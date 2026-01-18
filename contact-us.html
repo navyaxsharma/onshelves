@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | OnShelves</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+        <img src="logo-bgless.png" alt="OnShelves Logo">
+        <span>OnShelves</span>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How it Works</a></li>
+        <li><a href="brands.html">For Brands</a></li>
+        <li><a href="retailers.html">For Retailers</a></li>
+        <li><a href="contact-us.html" class="btn-contact">Contact</a></li>
+    </ul>
+</header>
+
+    <section class="contact-header-static">
+        <h1>Ready to Scale Offline?</h1>
+        <p>Book a call below to discuss your distribution strategy.</p>
+    </section>
+   
+
+    <section class="calendly-section">
+        <div class="calendly-inline-widget" 
+             data-url="https://calendly.com/snavya097/30min?month=2026-01" 
+             style="min-width:320px;height:700px;"></div>
+    </section>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

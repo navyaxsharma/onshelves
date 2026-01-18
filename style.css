@@ -1337,3 +1337,152 @@ text-align: center;
     background-color: rgb(85, 35, 108);
     color: white;
 }
+
+/* --- Global Styles --- */
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Mobile Navbar Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff; /* or your brand color */
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Mobile Breakpoint for Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
+
+/* --- Home Page Mobile Optimization --- */
+
+/* 1. Stats Section (500+ Stores, etc.) */
+/* Apply class="stats-container" to the div holding your stats */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows stacking */
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* 2. Challenges Section (The Grid) */
+/* Apply class="challenges-grid" to the div holding the 4 challenge items */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Desktop: 2 columns */
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .challenges-grid {
+        grid-template-columns: 1fr; /* Mobile: 1 column */
+    }
+}
+
+/* --- Mobile Hero/Tagline Optimization --- */
+
+@media (max-width: 768px) {
+    /* 1. Fix the main "Retail re-imagined" text */
+    .Tagline h2 {
+        font-size: 3rem;       /* Reduces size so it fits on screen */
+        line-height: 1.1;      /* Tighter spacing between lines */
+        padding: 0 15px;       /* Adds breathing room on the sides */
+        text-align: center;    /* Ensures it stays centered */
+        margin-top: 2rem;      /* Adds space from the navbar */
+    }
+
+    /* 2. Fix the "Connecting D2C..." subtext */
+    .vp {
+        font-size: 1.1rem;     /* Readable size for mobile */
+        padding: 0 20px;       /* Prevents text touching screen edges */
+        text-align: center;    /* Center align */
+        width: 100%;           /* Ensure container spans full width */
+        box-sizing: border-box; /* Includes padding in width calculation */
+        margin-top: 1rem;      /* separation from the main title */
+        white-space: normal;   /* Forces text to wrap if it's too long */
+    }
+
+    /* Optional: If the dots (•) look weird on mobile lines, hide them or style them */
+    .vp span {
+        display: inline-block;
+    }
+}
+
+.contact-header-static {
+    text-align: center;
+    padding: 60px 20px 10px 20px;
+    }
+
+
+.contact-header-static h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Racing Sans One', sans-serif;
+    color: #442e55;
+    
+}
+
+.contact-header-static p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    font-family: 'Blinker', sans-serif;
+
+}
+
+/* 4. Center the Calendly Widget */
+.calendly-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
